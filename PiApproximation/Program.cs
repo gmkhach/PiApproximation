@@ -12,5 +12,10 @@ namespace PiApproximation
         {
 
         }
+
+        public static double getHypotenus(Coordinates coordinates)
+        {
+            return Math.Sqrt(Math.Pow(coordinates.getX(), 2) + Math.Pow(coordinates.getY(), 2));
+        }
     }
 }

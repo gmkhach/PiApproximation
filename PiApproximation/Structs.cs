@@ -18,5 +18,8 @@ namespace PiApproximation
 
         double x;
         double y;
+
+        public double getX() => x;
+        public double getY() => y;
     }
 }
