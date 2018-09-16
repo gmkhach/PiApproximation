@@ -10,6 +10,7 @@ namespace PiApproximation
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
