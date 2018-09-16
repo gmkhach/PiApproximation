@@ -11,11 +11,28 @@ namespace PiApproximation
         static void Main(string[] args)
         {
             Coordinates[] array = generateCoordinates();
-            double counter = getCounter(array);
+            int counter = getCounter(array);
+            double ratio = getRatio(counter, array);
+            printResults(counter, ratio);
         }
 
-        // Steps 4. & 5.
-        private static double getCounter(Coordinates[] array)
+        // Step 6.
+        private static void printResults(int counter, double ratio)
+        {
+            Console.WriteLine($"Number of overlaps:\t\t\t{counter}");
+            Console.WriteLine($"Pi Approximation:\t\t\t{ratio}");
+            Console.WriteLine($"Difference from the actual value of Pi:\t{Math.Abs(Math.PI -ratio)}");
+        }
+
+        // Step 5. 
+        private static double getRatio(int counter, Coordinates[] array)
+        {
+            int len = array.Length;
+            return 4 * (double)counter/len;
+        }
+
+        // Steps 4.
+        private static int getCounter(Coordinates[] array)
         {
             int counter = 0;
             int len = array.Length;
