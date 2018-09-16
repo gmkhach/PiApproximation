@@ -17,8 +17,29 @@ namespace PiApproximation
         // Step 3. 
         public static int getLength()
         {
-            Console.Write("\nPlease enter an integer between 10 and 1,000,000 to indicates the number of points in your sample\n\n>>> ");
-            return int.Parse(Console.ReadLine().Trim());
+            int input = 0;
+            bool keepLooping = true;
+            do
+            {
+                try
+                {
+                    Console.Write("\nPlease enter an integer between 10 and 1,000,000 to indicates the number of points in your sample\n\n>>> ");
+                    input = int.Parse(Console.ReadLine().Trim());
+                    if (input >= 10 && input <= 1000000)
+                    {
+                        keepLooping = false;
+                    }
+                    else
+                    {
+                        throw new Exception("\nInvalid Entry!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("\n" + ex.Message);
+                }
+            } while (keepLooping);
+            return input;
         }
 
         // Step 3. continued
