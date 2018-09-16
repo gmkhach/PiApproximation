@@ -2,6 +2,7 @@
 
 namespace PiApproximation
 {
+    // Step 1. 
     class Coordinates
     {
         public Coordinates(double x, double y)
