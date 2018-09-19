@@ -92,7 +92,7 @@ namespace PiApproximation
             Console.WriteLine("\nHere are the Pi approximation results for running the simulation for 10, 100, 1000, and 10000 points.");
             foreach (int number in runs)
             {
-                Console.WriteLine($"\n{number} points:");
+                Console.WriteLine($"\n-----------------------------------------------------------\n{number} points:");
                 Program.runSimulation(number);
             }
         }
