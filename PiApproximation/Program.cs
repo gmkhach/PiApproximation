@@ -12,6 +12,8 @@ namespace PiApproximation
         {
             int len = Utilities.getLength();
             runSimulation(len);
+            Console.WriteLine("\nPress Enter to run the simulation for preset values...");
+            Console.ReadLine();
             Utilities.runPresets();
         }
 

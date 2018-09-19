@@ -89,6 +89,7 @@ namespace PiApproximation
         public static void runPresets()
         {
             int[] runs = { 10, 100, 1000, 10000 };
+            Console.Clear();
             Console.WriteLine("\nHere are the Pi approximation results for running the simulation for 10, 100, 1000, and 10000 points.");
             foreach (int number in runs)
             {
